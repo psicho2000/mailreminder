@@ -1,14 +1,20 @@
 import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Reminder} from "../model/reminder";
+import {map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RemindersService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-  findReminders() {
-    return [{"week": "1", "span": "1-7", "persons": ["Markus", "Lydia"]}, {"week": "2", "span": "8-14", "persons": []}];
+  findReminders(resultSize = 10): Observable<Reminder[]> {
+    return this.http.get('/reminders/${resultSize}').pipe(
+      map(res => res["payload"])
+    );
   }
 }

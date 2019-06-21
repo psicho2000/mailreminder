@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {RemindersDataSource} from "./reminders.datasource";
 import {RemindersService} from "./reminders.service";
 
 @Component({
@@ -9,12 +10,14 @@ import {RemindersService} from "./reminders.service";
 export class ReminderComponent implements OnInit {
 
   displayedColumns = ["week", "span", "persons"];
-  reminderService = new RemindersService();
+  remindersDataSource: RemindersDataSource;
 
-  constructor() {
+  constructor(private remindersService: RemindersService) {
   }
 
   ngOnInit() {
+    this.remindersDataSource = new RemindersDataSource(this.remindersService);
+    this.remindersDataSource.loadReminders(10);
   }
 
 }

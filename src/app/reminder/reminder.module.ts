@@ -8,7 +8,8 @@ import {MatInputModule, MatTableModule} from "@angular/material";
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, BrowserModule,
+    CommonModule,
+    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatInputModule,
