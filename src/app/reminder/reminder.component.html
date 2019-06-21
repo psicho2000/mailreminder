@@ -1,20 +1,22 @@
 <mat-table class="lessons-table mat-elevation-z8" [dataSource]="reminderService.findReminders()">
 
   <ng-container matColumnDef="week">
-    <div *matHeaderCellDef>week</div>
-    <div *matCellDef="let reminder">{{reminder.week}}</div>
+    <mat-header-cell class="small-cell" *matHeaderCellDef>Woche</mat-header-cell>
+    <mat-cell class="small-cell" *matCellDef="let reminder">{{reminder.week}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="span">
-    <div *matHeaderCellDef>span</div>
-    <div class="description-cell"
-         *matCellDef="let reminder">{{reminder.span}}</div>
+    <mat-header-cell class="small-cell" *matHeaderCellDef>Zeitraum</mat-header-cell>
+    <mat-cell class="small-cell"
+              *matCellDef="let reminder">{{reminder.span}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="persons">
-    <div *matHeaderCellDef>persons</div>
-    <div class="duration-cell"
-         *matCellDef="let reminder">{{reminder.persons}}</div>
+    <mat-header-cell class="big-cell" *matHeaderCellDef>Personen</mat-header-cell>
+    <mat-cell class="big-cell"
+              *matCellDef="let reminder">{{reminder.persons}}
+
+    </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
