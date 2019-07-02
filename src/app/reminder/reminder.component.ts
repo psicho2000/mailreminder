@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {RemindersDataSource} from "./reminders.datasource";
-import {RemindersService} from "./reminders.service";
+import {RemindersDataSource} from './reminders.datasource';
+import {RemindersService} from './reminders.service';
 
 @Component({
   selector: 'app-reminder',
@@ -9,7 +9,7 @@ import {RemindersService} from "./reminders.service";
 })
 export class ReminderComponent implements OnInit {
 
-  displayedColumns = ["week", "span", "persons"];
+  displayedColumns = ['week', 'span', 'persons'];
   remindersDataSource: RemindersDataSource;
 
   constructor(private remindersService: RemindersService) {

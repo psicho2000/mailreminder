@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ReminderComponent} from './reminder/reminder.component';
-import {MatTableModule} from "@angular/material";
+import {MatTableModule} from '@angular/material';
 
 @NgModule({
   declarations: [

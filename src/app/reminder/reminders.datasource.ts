@@ -1,8 +1,8 @@
-import {CollectionViewer, DataSource} from "@angular/cdk/collections";
-import {BehaviorSubject, Observable, of} from "rxjs";
-import {Reminder} from "../model/reminder";
-import {RemindersService} from "./reminders.service";
-import {catchError, finalize} from "rxjs/operators";
+import {CollectionViewer, DataSource} from '@angular/cdk/collections';
+import {BehaviorSubject, Observable, of} from 'rxjs';
+import {Reminder} from '../model/reminder';
+import {RemindersService} from './reminders.service';
+import {catchError, finalize} from 'rxjs/operators';
 
 
 export class RemindersDataSource implements DataSource<Reminder> {
@@ -14,7 +14,6 @@ export class RemindersDataSource implements DataSource<Reminder> {
   public loading$ = this.loadingSubject.asObservable();
 
   constructor(private remindersService: RemindersService) {
-
   }
 
   loadReminders(resultSize: number) {
@@ -30,7 +29,7 @@ export class RemindersDataSource implements DataSource<Reminder> {
   }
 
   connect(collectionViewer: CollectionViewer): Observable<Reminder[]> {
-    console.log("Connecting data source");
+    console.log('Connecting data source');
     return this.remindersSubject.asObservable();
   }
 
