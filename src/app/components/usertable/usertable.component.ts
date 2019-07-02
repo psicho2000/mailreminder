@@ -11,7 +11,7 @@ import {User} from '../../model/user';
 })
 export class UsertableComponent implements OnInit {
   dataSource = new UserDataSource(this.userService);
-  displayedColumns = ['email'];
+  displayedColumns = ['column'];
 
   constructor(private userService: UserService) {
   }
