@@ -21,6 +21,8 @@ java -jar server-side/build/libs/server-side-1.0-SNAPSHOT.jar
             ... 7 more
 
 # App mailreminder
+Start with `ng serve` or `npm run start` or use the npm Tool Window and click start.
+For debugging, create a Run Configuration "JavaScript Debug"´for URL: http://localhost:4200. Then, start app and run debugging config.
 
 ## Endpoints
     GET reminders/10 (ggf. mit default)
@@ -61,6 +63,5 @@ Optional
 * Create input field into cell
 * Use chips for persons
 ---
-* How to debug Angular App?
 * Create subdirs for services, datasources, components
 * One global module or many modules? What's the architecture?
