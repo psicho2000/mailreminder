@@ -53,3 +53,14 @@ Optional
 1. Gradle
 1. Kotlin
 1. Überflüssige Projekte aufräumen
+
+## ToDos Angular-App
+* Read Steyer's Workshop material
+---
+* Read table input from backend
+* Create input field into cell
+* Use chips for persons
+---
+* How to debug Angular App?
+* Create subdirs for services, datasources, components
+* One global module or many modules? What's the architecture?

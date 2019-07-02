@@ -1,14 +1,3 @@
-# ToDos
-* Read Steyer's Workshop material
----
-* Read table input from backend
-* Create input field into cell
-* Use chips for persons
----
-* How to debug Angular App?
-* Create subdirs for services, datasources, components
-* One global module or many modules? What's the architecture?
-
 # Mailreminder
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
