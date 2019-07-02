@@ -1,5 +1,7 @@
 export interface Reminder {
+  year: string;
   week: string;
-  span: string;
+  from: string;
+  to: string;
   persons: string[];
 }
