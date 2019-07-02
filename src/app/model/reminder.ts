@@ -3,4 +3,3 @@ export interface Reminder {
   span: string;
   persons: string[];
 }
-
