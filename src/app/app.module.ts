@@ -2,17 +2,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
+import {ReminderComponent} from './components/reminder/reminder.component';
+import {reminderService} from './services/reminder.service';
 import {MatInputModule, MatTableModule} from '@angular/material';
-import {UsertableComponent} from './components/usertable/usertable.component';
 import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-import {UserService} from './services/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsertableComponent,
+    ReminderComponent,
   ],
   imports: [
     CommonModule,
@@ -22,7 +22,7 @@ import {UserService} from './services/user.service';
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [UserService],
+  providers: [reminderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
