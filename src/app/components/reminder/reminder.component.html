@@ -1,8 +1,13 @@
 <mat-table class="mat-elevation-z8" [dataSource]="dataSource">
-  <ng-container matColumnDef="column">
-    <mat-header-cell *matHeaderCellDef>Die Spalte</mat-header-cell>
+  <ng-container matColumnDef="column1">
+    <mat-header-cell *matHeaderCellDef>Woche</mat-header-cell>
     <mat-cell *matCellDef="let reminder"> {{reminder.week}} </mat-cell>
   </ng-container>
+  <ng-container matColumnDef="column2">
+    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+    <mat-cell *matCellDef="let reminder"> {{reminder.email}} </mat-cell>
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>

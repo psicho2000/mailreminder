@@ -5,8 +5,8 @@ import {Reminder} from '../model/reminder';
 
 @Injectable()
 export class reminderService {
-  private serviceUrl = 'http://localhost:8080/reminders/10';
-  private serviceUrl2 = 'https://jsonplaceholder.typicode.com/users';
+  private serviceUrl2 = 'http://localhost:8080/reminders';
+  private serviceUrl = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) {
   }
