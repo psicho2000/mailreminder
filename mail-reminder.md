@@ -55,6 +55,7 @@ Optional
 1. Gradle
 1. Kotlin
 1. Überflüssige Projekte aufräumen
+1. Umbau zu Self Contained Service (SCS)
 
 ## ToDos Angular-App
 * Read Steyer's Workshop material
