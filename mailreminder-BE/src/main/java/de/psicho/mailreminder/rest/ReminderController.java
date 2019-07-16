@@ -6,6 +6,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import de.psicho.mailreminder.model.Reminder;
 @RestController
 public class ReminderController {
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/reminders", produces = APPLICATION_JSON_UTF8_VALUE)
     public List<Reminder> findReminders() {
         var result = new ArrayList<Reminder>();

@@ -11,7 +11,7 @@ import {Reminder} from '../../model/reminder';
 })
 export class ReminderComponent implements OnInit {
   dataSource = new ReminderDataSource(this.reminderService);
-  displayedColumns = ['column1', 'column2'];
+  displayedColumns = ['week', 'span', 'persons'];
 
   constructor(private reminderService: reminderService) {
   }

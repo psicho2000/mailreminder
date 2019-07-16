@@ -1,11 +1,15 @@
 <mat-table class="mat-elevation-z8" [dataSource]="dataSource">
-  <ng-container matColumnDef="column1">
+  <ng-container matColumnDef="week">
     <mat-header-cell *matHeaderCellDef>Woche</mat-header-cell>
     <mat-cell *matCellDef="let reminder"> {{reminder.week}} </mat-cell>
   </ng-container>
-  <ng-container matColumnDef="column2">
-    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
-    <mat-cell *matCellDef="let reminder"> {{reminder.email}} </mat-cell>
+  <ng-container matColumnDef="span">
+    <mat-header-cell *matHeaderCellDef>Zeitraum</mat-header-cell>
+    <mat-cell *matCellDef="let reminder"> {{reminder.from}}-{{reminder.to}}{{reminder.year}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="persons">
+    <mat-header-cell *matHeaderCellDef>Verantwortlich</mat-header-cell>
+    <mat-cell *matCellDef="let reminder"> {{reminder.persons}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
