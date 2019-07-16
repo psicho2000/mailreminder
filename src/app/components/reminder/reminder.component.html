@@ -9,7 +9,13 @@
   </ng-container>
   <ng-container matColumnDef="persons">
     <mat-header-cell *matHeaderCellDef>Verantwortlich</mat-header-cell>
-    <mat-cell *matCellDef="let reminder"> {{reminder.persons}} </mat-cell>
+    <mat-cell *matCellDef="let reminder">
+      <mat-chip-list>
+        <mat-chip *ngFor="let person of reminder.persons">
+          {{person}}
+        </mat-chip>
+      </mat-chip-list>
+    </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
